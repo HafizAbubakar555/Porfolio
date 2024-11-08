@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/4b302d1940.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- link slik slider -->
+    <link rel="stylesheet" href="./slick.css" />
+    <title>My Portfolio</title>
+    <style>
+      * {
+        font-family: Ubuntu, sans-serif;
+      }
+      .container {
+        display: inline-block;
+        cursor: pointer;
+        position: relative;
+      }
+
+      .bar1,
+      .bar2,
+      .bar3 {
+        width: 25px;
+        height: 4px;
+        background-color: #a85800;
+        margin: 5px 0;
+        transition: 0.4s;
+      }
+
+      .change .bar1 {
+        transform: translate(0, 9px) rotate(-45deg);
+      }
+
+      .change .bar2 {
+        opacity: 0;
+      }
+
+      .change .bar3 {
+        transform: translate(0, -9px) rotate(45deg);
+      }
+    </style>
+    <link rel="stylesheet" href="./src/output.css" />
+  </head>
+  <body class="flex flex-col justify-center items-center">
+    <!-- header start -->
+    <header class="max-w-[2000px] w-full bg-[#f58e1e] py-4 lg:py-5">
+      <div
+        class="w-full flex flex-row justify-between items-center sm:justify-around"
+      >
+        <div class="flex flex-row px-5 gap-5">
+          <div class="md:flex gap-3">
+            <i class="fa-solid fa-phone text-[#eff1f5] text-sm"></i>
+            <span class="hidden text-[#eff1f5] text-sm md:block"
+              >+92-322-6368525</span
+            >
+          </div>
+          <div class="md:flex gap-3">
+            <i class="fa-solid fa-location-dot text-[#eff1f5] text-sm"></i>
+            <span class="hidden text-[#eff1f5] text-sm md:block"
+              >Allamah Iqbal Colony Faisalabad</span
+            >
+          </div>
+        </div>
+
+        <div class="flex flex-row px-5 gap-5">
+          <a href="#"
+            ><i
+              class="fa-brands fa-facebook-f text-[#eff1f5] hover:text-[#a85800]"
+            ></i
+          ></a>
+          <a href="#"
+            ><i
+              class="fa-brands fa-instagram text-[#eff1f5] hover:text-[#a85800]"
+            ></i
+          ></a>
+          <a href="#"
+            ><i
+              class="fa-brands fa-linkedin-in text-[#eff1f5] hover:text-[#a85800]"
+            ></i
+          ></a>
+        </div>
+      </div>
+    </header>
+    <!-- header end -->
+    <!-- navbar start -->
+    <nav class="max-w-[2000px] w-full">
+      <div class="w-full md:flex md:justify-between md:items-center">
+        <div
+          class="w-full flex flex-col justify-center items-center mb-5 md:mb-0 md:w-1/2 lg:w-full"
+        >
+          <a class="flex justify-center items-center" href="./index.html"
+            ><img
+              class="w-1/3 md:w-[40%] lg:w-[20%] 2xl:w-[15%]"
+              src="./images/ha logo.png"
+              alt=""
+          /></a>
+        </div>
+        <div
+          id="navbar"
+          class="w-0 h-[100vh] flex flex-col fixed bg-[#f58e1e] top-0 py-11 duration-500 overflow-hidden md:static md:w-full md:h-auto md:flex-row md:bg-white"
+        >
+          <a
+            class="text-xl pl-10 py-4 border-b-2 text-white cursor-pointer hover:text-[#a85800] md:text-black md:border-none md:p-7 xl:p-8"
+            href="./index.html"
+            >Home</a
+          >
+          <a
+            class="text-xl pl-10 py-4 border-b-2 text-white cursor-pointer hover:text-[#a85800] md:text-black md:border-none md:p-7 xl:p-8"
+            href="about.html"
+            >About</a
+          >
+          <a
+            class="text-xl pl-10 py-4 border-b-2 text-white cursor-pointer hover:text-[#a85800] md:text-black md:border-none md:p-7 xl:p-8"
+            href="projects.html"
+            >Projects</a
+          >
+          <a
+            class="text-xl pl-10 py-4 border-b-2 text-white cursor-pointer hover:text-[#a85800] md:text-[#f58e1e] md:border-none md:p-7 xl:p-8"
+            href="contact.html"
+            >Contact Us</a
+          >
+        </div>
+      </div>
+      <div
+        id="nav-btn"
+        class="position: absolute top-16 right-4 md:hidden duration-500"
+      >
+        <div class="container" onclick="myFunction(this)">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+      </div>
+    </nav>
+    <!-- navbar end -->
+
+    <main class="max-w-[2000px] w-full">
+       <!-- contact form start -->
+       <section class=" w-full px-10 py-10 lg:py-20">
+        <div class="flex flex-col justify-center items-center w-full">
+          <h1 class="text-3xl font-semibold mb-8 lg:text-5xl lg:mb-10">Contact me</h1>
+          <div class="flex flex-col justify-center items-center w-full lg:flex-row lg:items-start">
+            <div class="flex flex-col justify-center items-center w-full mb-12 lg:w-1/2 lg:mb-0 lg:mx-6">
+              <input class="border-b-2 placeholder-black placeholder:font-medium w-full h-[50px] pl-5  mb-3 text-[18px] text-black sm:w-[501px] sm:h-[60px] lg:mb-4" type="text" placeholder="Name">
+              <input class="border-b-2 placeholder-black placeholder:font-medium w-full h-[50px] pl-5  mb-3 text-[18px] text-black sm:w-[501px] sm:h-[60px] lg:mb-4"  type="text" placeholder="Email">
+              <input class="border-b-2 placeholder-black placeholder:font-medium w-full h-[50px] pl-5  mb-3 text-[18px] text-black sm:w-[501px] sm:h-[60px] lg:mb-4"  type="number" placeholder="Phone">
+              <textarea class="border-b-2 placeholder-black placeholder:font-medium w-full h-[100px] pl-5 pt-3 mb-4 text-[18px] text-black sm:w-[501px] sm:h-[120px] lg:mb-5"  name="#" id="#" placeholder="Message"></textarea>
+              <button
+                class="border-2 w-40 h-12 text-white rounded-2xl bg-[#f58e1e] hover:bg-[#a85800]"
+              >
+                Submit
+              </button>
+            </div>
+            <div class="flex flex-col justify-center items-center lg:w-1/2 lg:items-start lg:mx-6 lg:py-20">
+              <div class="mb-7 lg:mb-10">
+                <div class="flex flex-row justify-center items-center mb-1 lg:justify-start">
+                  <i class="fa-solid fa-location-dot text-[#f58e1e] text-[20px] sm:text-[25px]"></i>
+                  <h2 class="text-black font-bold text-[20px] ml-3">Address</h2>
+                </div>
+                <p class="text-[#363636] text-center">Allamah Iqbal colony Faisalabad</p>
+              </div>
+              <div class="mb-7 lg:mb-10">
+                <div class="flex flex-row justify-center items-center mb-1 lg:justify-start">
+                  <i class="fa-solid fa-phone text-[#f58e1e] text-[20px] sm:text-[25px]"></i>
+                <h2 class="text-black font-bold text-[20px] ml-3">Phone</h2>  
+                </div>
+                <p class="text-[#363636] text-center">+92-322-6368525</p>
+              </div>
+              <div>
+                <i class="fa-brands fa-facebook text-[#f58e1e] text-[20px] mx-1 sm:text-[25px] sm:mx-2"></i>
+                <i class="fa-brands fa-instagram text-[#f58e1e] text-[20px] mx-1 sm:text-[25px] sm:mx-2"></i>
+                <i class="fa-brands fa-linkedin-in text-[#f58e1e] text-[20px] mx-1 sm:text-[25px] sm:mx-2"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+       </section>
+       <!-- contact form end -->
+    </main>
+    <!-- footer start -->
+    <section class="w-full py-4 lg:py-5 border-t-2">
+      <div class="w-full flex flex-row justify-between items-center sm:justify-around">
+          <div>
+              <h1 class="text-[#363636]">© 2024 | Designed and coded with love by Hafiz Abubakar</h1>
+          </div>
+
+          <div class="flex flex-row px-5 gap-5">
+              <i class="fa-brands fa-facebook-f text-[#f58e1e]"></i>
+              <i class="fa-brands fa-twitter text-[#f58e1e]"></i>
+              <i class="fa-brands fa-instagram text-[#f58e1e]"></i>
+              <i class="fa-brands fa-linkedin-in text-[#f58e1e]"></i>
+          </div>
+      </div>
+   </section>
+    <!-- footer start -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.5.2/jquery-migrate.min.js"
+      integrity="sha512-BzvgYEoHXuphX+g7B/laemJGYFdrq4fTKEo+B3PurSxstMZtwu28FHkPKXu6dSBCzbUWqz/rMv755nUwhjQypw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./slick.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $("#slider").slick({
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 500,
+          prevArrow:
+            ' <span class="prev-btn"></span>',
+          nextArrow:
+            ' <span class="next-btn"></i></span>',
+          responsive: [
+          {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+              },
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+              },
+            },
+          ],
+        });
+      });
+    </script>
+
+    <script src="./src/script.js"></script>
+  </body>
+</html>

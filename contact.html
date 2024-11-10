@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/4b302d1940.js"
+      crossorigin="anonymous"
+    ></script>
+     <!-- link AOS -->
+     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- link slik slider -->
+    <link rel="stylesheet" href="./slick.css" />
+    <title>My Portfolio</title>
+    <style>
+      * {
+        font-family: Ubuntu, sans-serif;
+      }
+      .container {
+        display: inline-block;
+        cursor: pointer;
+        position: relative;
+      }
+
+      .bar1,
+      .bar2,
+      .bar3 {
+        width: 25px;
+        height: 4px;
+        background-color:white;
+        margin: 5px 0;
+        transition: 0.4s;
+      }
+
+      .change .bar1 {
+        transform: translate(0, 9px) rotate(-45deg);
+      }
+
+      .change .bar2 {
+        opacity: 0;
+      }
+
+      .change .bar3 {
+        transform: translate(0, -9px) rotate(45deg);
+      }
+    </style>
+    <link rel="stylesheet" href="./src/output.css" />
+  </head>
+  <body class="flex flex-col justify-center items-center bg-[#282828]">
+    <!-- header start -->
+     <header style="background-image: url(./images/bg-3.png);" class="max-w-[2000px] w-full bg-center  bg-no-repeat bg-cover py-3"> 
+      <!-- navbar start -->
+    <nav class="max-w-[2000px] w-full">
+      <div class="w-full md:flex md:justify-between md:items-center">
+        <div
+          class="w-full flex flex-col justify-center items-center mb-5 md:mb-0 md:w-1/2 lg:w-full"
+        >
+          <a class="flex justify-center items-center" href="./index.html"
+            ><img
+              class="w-1/3 md:w-[40%] lg:w-[20%] 2xl:w-[15%]"
+              src="./images/logo.png"
+              alt=""
+          /></a>
+        </div>
+        <div
+          id="navbar"
+          class="w-0 h-[100vh] z-10 flex flex-col fixed bg-[#7b3897] top-0 py-11 duration-500 overflow-hidden md:static md:w-full md:h-auto md:flex-row md:bg-transparent"
+        >
+          <a
+            class="text-xl pl-10 py-4 border-b-2 text-white cursor-pointer hover:text-[#c42f8b]  md:border-none md:p-7 xl:p-8"
+            href="./index.html"
+            >Home</a
+          >
+          <a
+            class="text-xl pl-10 py-4 border-b-2 text-white cursor-pointer hover:text-[#c42f8b] md:border-none md:p-7 xl:p-8"
+            href="about.html"
+            >About</a
+          >
+          <a
+            class="text-xl pl-10 py-4 border-b-2 text-white cursor-pointer hover:text-[#c42f8b] md:border-none md:p-7 xl:p-8"
+            href="projects.html"
+            >Projects</a
+          >
+          <a
+            class="text-xl pl-10 py-4 border-b-2 text-white cursor-pointer hover:text-[#c42f8b] md:text-[#c63838] md:p-7 xl:p-8"
+            href="contact.html"
+            >Contact Us</a
+          >
+        </div>
+      </div>
+      <div
+        id="nav-btn"
+        class="position: absolute top-16 right-4 md:hidden duration-500 z-20"
+      >
+        <div class="container" onclick="myFunction(this)">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+      </div>
+    </nav>
+    <!-- navbar end -->
+     <!-- introducing start -->
+     <section
+     class="w-full py-20 md:py-20 md:pb-32"
+   >
+     <div class="w-full flex flex-col justify-center items-center md:justify-start md:items-baseline ">
+       <div class="px-3 flex flex-col justify-center items-center md:justify-start md:items-baseline md:ml-[5%]">
+         <h1 class="text-center text-white text-4xl pb-7 lg:text-6xl">
+          Hey, I'm Hafiz Abubakar
+         </h1>
+         <h1 class="text-center text-white text-xl pb-8 lg:text-3xl md:text-start md:w-1/2">
+          I'm a frontend developer with a passion for crafting clean, responsive, and engaging web experiences.
+         </h1>
+       </div>
+     </div>
+   </section>
+   <!-- introducing end -->
+     </header>
+    <!-- header end -->
+
+    <main class="max-w-[2000px] w-full">
+       <!-- contact form start -->
+       <section class=" w-full px-10 py-10 lg:py-20">
+        <div class="flex flex-col justify-center items-center w-full" data-aos="fade-right">
+          <h1 class="text-white text-3xl font-semibold mb-8 lg:text-5xl lg:mb-10">Contact me</h1>
+          <div class="flex flex-col justify-center items-center w-full lg:flex-row">
+            <div class="flex flex-col justify-center items-center w-full mb-12 lg:w-1/2 lg:mb-0 lg:mx-6">
+              <input class="border-b-2 bg-transparent placeholder-white text-white placeholder:font-medium w-full h-[50px] pl-5  mb-3 text-[18px] sm:w-[501px] sm:h-[60px] lg:mb-4" type="text" placeholder="Name">
+              <input class="border-b-2 placeholder-white bg-transparent text-white placeholder:font-medium w-full h-[50px] pl-5  mb-3 text-[18px] sm:w-[501px] sm:h-[60px] lg:mb-4"  type="text" placeholder="Email">
+              <input class="border-b-2 placeholder-white bg-transparent text-white placeholder:font-medium w-full h-[50px] pl-5  mb-3 text-[18px] sm:w-[501px] sm:h-[60px] lg:mb-4"  type="number" placeholder="Phone">
+              <textarea class="border-b-2 placeholder-white  placeholder:font-medium w-full h-[100px] pl-5 pt-3 mb-4 text-[18px] bg-transparent text-white sm:w-[501px] sm:h-[120px] lg:mb-5"  name="#" id="#" placeholder="Message"></textarea>
+              <button class="bg-gradient-to-r from-[#cd308b] to-[#3242a2] text-white w-20 h-10 cursor-pointer rounded-3xl hover:bg-gradient-to-r hover:from-[#3242a2] hover:to-[#cd308b] xl:w-40 xl:h-12 hover:shadow-md hover:shadow-white">Submit</button>
+            </div>
+            <div class="flex flex-col justify-center items-center lg:w-1/2 lg:items-start lg:mx-6 lg:py-20">
+              <div class="w-full flex justify-center items-center">
+                <img
+                  class="w-[80%] lg:w-[60%] 2xl:w-1/2 rounded-[50%]"
+                  src="./images/persnol.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+       </section>
+       <!-- contact form end -->
+    </main>
+    <!-- footer start -->
+    <footer style="background-image: url(./images/bg-2.png);" class="w-full bg-cover bg-center bg-no-repeat">
+      <!-- footer 1 start   -->
+    <section  class="w-full py-16 flex flex-col justify-center items-center">
+      <div class="w-[90%] flex flex-col justify-center items-center lg:flex-row lg:justify-normal lg:items-start xl:w-[70%]" data-aos="fade-flip">
+          <div class="w-full flex mb-4 flex-col justify-center items-center lg:justify-start lg:items-baseline">
+              <div class="flex w-1/2 mb-4"><img src="./images/logo.png" alt=""></div>
+          </div>
+          <div class="w-1/2 flex flex-col justify-start items-baseline mb-5 lg:w-full">
+              <h1 class="text-white text-2xl font-Flareserif font-bold mb-4">Links</h1>
+              <div class="flex flex-col justify-start items-baseline sm:flex-row sm:gap-8 lg:gap-11">
+                  <div class="flex flex-col justify-start items-baseline">
+                      <a class=" mb-2 text-white hover:text-[#c42f8b]" href="./index.html">Home</a>
+                      <a class=" mb-2 text-white hover:text-[#c42f8b]" href="./about.html">About</a>
+                      <a class=" mb-2 text-white hover:text-[#c42f8b]" href="./projects.html">Projects</a>
+                      <a class=" mb-2 text-white hover:text-[#c42f8b]" href="./contact.html">Contact</a>
+                  </div>
+              </div>
+          </div>
+          <div class="w-1/2 flex flex-col justify-start items-baseline lg:w-full">
+              <h1 class="text-white text-2xl font-Flareserif font-bold mb-4">Reach Me</h1>
+              <span class="mb-4 flex justify-center items-center">
+                  <i class="fa-solid fa-location-dot w-10 h-10 leading-10 text-center text-lg text-white bg-gradient-to-r from-[#cd308b] to-[#3242a2] rounded-[50%] mr-2 hover:bg-gradient-to-r hover:from-[#3242a2] hover:to-[#cd308b]"></i>
+                  <div class="flex flex-col float-right">
+                      <p class="text-white">Allamah iqbal colony</p>
+                      <p class="text-white">Faisalabad</p>
+                  </div>
+              </span>
+              <span class="mb-4 flex justify-center items-center">
+                <i class="fa-solid fa-phone w-10 h-10 leading-10 text-center text-lg text-white bg-gradient-to-r from-[#cd308b] to-[#3242a2] rounded-[50%] mr-2 hover:bg-gradient-to-r hover:from-[#3242a2] hover:to-[#cd308b]"></i>
+                  <p class="text-white">+92 322 6368525</p>
+              </span>
+          </div>
+      </div>
+   </section>
+    <!-- footer 1 end   -->
+    <!-- footer 2 start -->
+    <section class="w-full py-4 lg:py-5 border-t-2">
+      <div class="w-full flex flex-row justify-between items-center sm:justify-around">
+        <div>
+          <h1 class="text-white">© 2024 | Designed and coded with love by Hafiz Abubakar</h1>
+        </div>
+        
+        <div class="flex flex-row px-5 gap-5">
+          <i class="fa-brands fa-facebook-f text-white"></i>
+          <i class="fa-brands fa-twitter text-white"></i>
+          <i class="fa-brands fa-instagram text-white"></i>
+          <i class="fa-brands fa-linkedin-in text-white"></i>
+        </div>
+      </div>
+    </section>
+    <!-- footer 2 end   -->
+    </footer>
+    <!-- footer start -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.5.2/jquery-migrate.min.js"
+      integrity="sha512-BzvgYEoHXuphX+g7B/laemJGYFdrq4fTKEo+B3PurSxstMZtwu28FHkPKXu6dSBCzbUWqz/rMv755nUwhjQypw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./slick.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $("#slider").slick({
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 500,
+          prevArrow:
+            ' <span class="prev-btn"></span>',
+          nextArrow:
+            ' <span class="next-btn"></i></span>',
+          responsive: [
+          {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+              },
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+              },
+            },
+          ],
+        });
+      });
+    </script>
+    <!-- link AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+       offset: 300,
+       duration:700,
+      });
+    </script>
+    <script src="./src/script.js"></script>
+  </body>
+</html>
